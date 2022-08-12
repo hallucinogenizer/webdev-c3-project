@@ -34,10 +34,7 @@ con.connect((err)=>{
 })
 
 app.get("/", (req,res)=>{
-    con.query(`INSERT INTO Users (name,email) VALUES ('${req.query.name}', '${req.query.email}')`, (err, result)=>{
-        if (err) res.send("An error has occured");
-        else res.send("Hello World")
-    })
+    res.send("Hello World")
 })
 
 app.post("/signup", (req,res)=>{
